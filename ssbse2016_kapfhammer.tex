@@ -1,0 +1,102 @@
+\documentclass[hyperref]{beamer}
+
+\usecolortheme[accent=blue,dark]{solarized}
+
+\beamertemplatetransparentcovered
+
+\usepackage[utf8]{inputenc}
+\usepackage{merriweather}
+\usepackage{moresize}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+\usepackage{graphicx}
+% \usepackage{subcaption}
+\usepackage{fontawesome}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{color, colortbl}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepgfplotslibrary{colormaps,external}
+
+\usetikzlibrary{arrows.meta}
+
+\usepackage{pifont}
+\newcommand{\cmark}{{\color{solarizedGreen}\ding{51}}}
+\newcommand{\xmark}{{\color{solarizedRed}{\ding{55}}}}
+\newcommand{\cmarkhide}{{\color{solarizedBase2}\ding{51}}}
+\newcommand{\xmarkhide}{{\color{solarizedBase2}{\ding{55}}}}
+% \newcommand{\cmark}{{\color{solarizedGreen}\ding{51}}}
+% \newcommand{\xmark}{{\color{solarizedOrange}{\ding{55}}}}
+% \newcommand{\cmarkhide}{{\color{kapfhammerDarkGrey}\ding{51}}}
+% \newcommand{\xmarkhide}{{\color{kapfhammerDarkGrey}{\ding{55}}}}
+\newcommand\sql[1]{{\tt \small #1}}
+
+
+%% Rotated table column type
+\newcolumntype{R}[2]{%
+    >{\adjustbox{minipage=6em,angle=#1,lap=\width-(#2)}\bgroup}%
+    l%
+    <{\egroup}%
+}
+\newcommand*\rot{\multicolumn{1}{R{40}{3em}}}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,shadows,arrows,shapes,calc,backgrounds}
+
+\setbeamercolor{background canvas}{bg=solarizedBase2}
+% \setbeamercolor{background canvas}{bg=kapfhammerDarkGrey}
+
+\setbeamertemplate{section in toc shaded}[default][65]
+\setbeamertemplate{subsection in toc shaded}[default][65]
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamerfont{title}{size=\HUGE,series=\rmfamily,parent=merriweather}
+\setbeamerfont{subtitle}{size=\LARGE,series=\bfseries,parent=merriweather}
+% \setbeamerfont{title}{size=\Huge,series=\rmfamily,parent=merriweather}
+\setbeamerfont{frametitle}{size=\HUGE,series=\rmfamily,parent=merriweather}
+\setbeamerfont{framesubtitle}{size=\normalsize,series=\rmfamily,parent=merriweather}
+\setbeamerfont{author}{size=\LARGE,series=\bfseries,parent=merriweather}
+\setbeamerfont{institute}{size=\normalsize,series=\bfseries,parent=merriweather}
+\setbeamerfont{date}{size=\normalsize,series=\bfseries,parent=merriweather}
+
+\setbeamercolor{title}{fg=solarizedBlue}
+% \setbeamercolor{title}{fg=solarizedOrange}
+\setbeamercolor{subtitle}{fg=solarizedBlue}
+% \setbeamercolor{subtitle}{fg=solarizedViolet}
+\setbeamercolor{frametitle}{fg=solarizedBase02}
+\setbeamercolor{framesubtitle}{fg=solarizedBase02}
+% \setbeamercolor{frametitle}{fg=kapfhammerDarkGrey}
+% \setbeamercolor{framesubtitle}{fg=kapfhammerDarkGrey}
+\setbeamercolor{author}{fg=solarizedRebase00}
+\setbeamercolor{institute}{fg=solarizedRebase00}
+\setbeamercolor{date}{fg=solarizedRebase00}
+
+\addtobeamertemplate{frametitle}{\vskip.1in}{}
+
+\graphicspath{ {images/} }
+
+\usepackage{listings}
+
+\title{\fontsize{50}{50}\selectfont{AVM$f$}}
+\subtitle{An Open-Source Implementation of the Alternating Variable Method}
+
+\author[Gregory M. Kapfhammer]{Gregory M. Kapfhammer}
+
+\institute[SSBSE 2016]{SSBSE 2016}
+
+\date[October 9, 2016]{October 9, 2016}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Introduction}
+\input{sections/introduction.tex}
+
+\end{document}
