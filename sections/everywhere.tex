@@ -1,12 +1,11 @@
+%%%%% TIKZ STYLES FOR THESE SLIDES:
+
+\tikzstyle{proc} = [draw=none, fill=none, text centered, text=solarizedRebase02]
+
+%%%%% SLIDE: Give some of the details about the great use of the AVM
+
 \begin{frame}
   \frametitle{AVM is Everywhere}
-
-  \tikzstyle{box}=[rectangle, draw=solarizedBase02, rounded corners, fill=solarizedBlue, drop shadow,
-  text centered, anchor=north, text=white, minimum height = 1cm, text width=3cm]
-  \tikzstyle{operator}=[rectangle, draw=solarizedBase02, rounded corners, fill=solarizedOrange, drop shadow,
-  text centered, anchor=north, text=white, minimum height = 1cm, text width=8cm]
-  \tikzstyle{smallbox}=[rectangle, draw=solarizedBase02, rounded corners, fill=solarizedBlue, drop shadow,
-  text centered, anchor=north, text=white, minimum height = 1cm, text width=2cm]
 
   \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
 
@@ -37,12 +36,14 @@
     %% Tool 3
 
     \path[->, line width = 3pt]<4-> node[proc, below of=TestGeneration, text width=22ex,
-      yshift=-1.1in, xshift=-.5in]
+      yshift=-1in, xshift=-.5in]
       (Schema) {\Huge \selectfont{\textcolor{solarizedRebase00}{SchemaAnalyst}}}
       (TestGeneration) edge node {}
       (Schema);
 
-
+    \path[->]<5-> node[proc, below of=TestGeneration, text width=60ex,
+        yshift=-1.65in, xshift=0.0in]
+        (Point) {\huge \selectfont{\textcolor{solarizedBlue}{AVM is used in many well-known tools!}}};
 
   \end{tikzpicture}
 
