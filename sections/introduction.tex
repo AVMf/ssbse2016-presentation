@@ -63,6 +63,39 @@
       yshift=-0in, xshift=0in] (PatternAnswer)
       {\LARGE \selectfont{\textcolor{solarizedGreen}{Yes! pattern \textcolor{solarizedRebase00}or \textcolor{solarizedRed}{No! explore}}}};
 
+    \path[->]<12-> node[proc, below of=InputVectorName, text width=60ex,
+      yshift=-.2in, xshift=0in] (InputVector)
+      {\HUGE \selectfont{\textcolor{solarizedRebase00}{$\vec{x} = (x_1, \textcolor{solarizedBlue}{x_2}, \ldots, x_n)$}}};
+
+    %%% Step: Highlight the second variable and briefly discuss iteration
+
+    \path[->]<13-> node[proc, below of=InputVector, text width=60ex,
+      yshift=-.4in, xshift=0in] (ExploratoryMoves)
+      {\HUGE \selectfont{\textcolor{solarizedBlue}{Exploratory and Pattern Moves}}};
+
+    \path[->]<14-15> node[proc, below of=PatternQuestion, text width=60ex,
+      yshift=.05in, xshift=0in] (PatternAnswer)
+      {\LARGE \selectfont{\textcolor{solarizedRebase00}{Consider all input vector variables}}};
+
+    \path[->]<15-15> node[proc, below of=InputVectorName, text width=60ex,
+      yshift=-.2in, xshift=0in] (InputVector)
+      {\HUGE \selectfont{\textcolor{solarizedRebase00}{$\vec{x} = (x_1, \textcolor{solarizedRebase00}{x_2}, \ldots, \textcolor{solarizedBlue}{x_n})$}}};
+
+    \path[->]<16-> node[proc, below of=InputVectorName, text width=60ex,
+      yshift=-.2in, xshift=0in] (InputVector)
+      {\HUGE \selectfont{\textcolor{solarizedRebase00}{$\vec{x} = (\textcolor{solarizedBlue}{x_1}, \textcolor{solarizedBlue}{x_2}, \ldots, \textcolor{solarizedBlue}{x_n})$}}};
+
+    \path[->]<16-16> node[proc, below of=PatternQuestion, text width=60ex,
+      yshift=.05in, xshift=0in] (PatternAnswer)
+      {\LARGE \selectfont{\textcolor{solarizedRebase00}{Revisit each $x_i$ in the input vector}}};
+
+    \path[->]<17-17> node[proc, below of=PatternQuestion, text width=60ex,
+      yshift=.05in, xshift=0in] (PatternAnswer)
+      {\LARGE \selectfont{\textcolor{solarizedRebase00}{Restart for local optimum}}};
+
+    \path[->]<18-> node[proc, below of=PatternQuestion, text width=60ex,
+      yshift=.05in, xshift=0in] (PatternAnswer)
+      {\LARGE \selectfont{\textcolor{solarizedRebase00}{Continue until termination condition}}};
 
   \end{tikzpicture}
 
