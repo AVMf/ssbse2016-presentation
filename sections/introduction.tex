@@ -14,7 +14,7 @@
     %%% Step: Input Vector
 
     \path[->]<1-> node[proc, text width=60ex]
-      (InputVectorName) at (3.5,3)
+      (InputVectorName) at (3.5,3.2)
       {\HUGE \selectfont{\textcolor{solarizedRebase00}{Input \thinspace Vector}}};
 
     %%% Step: Show the input vector
@@ -25,23 +25,43 @@
 
     %%% Step: Display the objective function and say it evaluates the input vector
 
-    \path[->]<3-4> node[proc, below of=InputVector, text width=60ex,
-      yshift=-.3in, xshift=0in] (InputVector)
-      {\HUGE \selectfont{\textcolor{solarizedRebase00}{Objective \thinspace Function}}};
-
-    \path[->]<4-4> node[proc, below of=InputVectorName, text width=60ex,
+    \path[->]<3-4> node[proc, below of=InputVectorName, text width=60ex,
       yshift=-.2in, xshift=0in] (InputVector)
-      {\HUGE \selectfont{\textcolor{solarizedRebase00}{$\textcolor{solarizedRed}{\vec{x}} = (x_1, x_2, \ldots, x_n)$}}};
+      {\HUGE \selectfont{\textcolor{solarizedRebase00}{$\textcolor{solarizedBlue}{\vec{x}} = (x_1, x_2, \ldots, x_n)$}}};
+
+    \path[->]<4-4> node[proc, below of=InputVector, text width=60ex,
+      yshift=-.3in, xshift=0in] (InputVector)
+      {\HUGE \selectfont{\textcolor{solarizedBlue}{Objective \thinspace Function}}};
 
     %%% Step: Highlight the first variable and explain the moves to perform
 
     \path[->]<5-> node[proc, below of=InputVectorName, text width=60ex,
       yshift=-.2in, xshift=0in] (InputVector)
-      {\HUGE \selectfont{\textcolor{solarizedRebase00}{$\vec{x} = (\textcolor{solarizedRed}{x_1}, x_2, \ldots, x_n)$}}};
+      {\HUGE \selectfont{\textcolor{solarizedRebase00}{$\vec{x} = (\textcolor{solarizedBlue}{x_1}, x_2, \ldots, x_n)$}}};
 
-    \path[->]<5-5> node[proc, below of=InputVector, text width=60ex,
-      yshift=-.3in, xshift=0in] (InputVector)
-      {\HUGE \selectfont{\textcolor{solarizedRebase00}{Exploratory \thinspace Moves}}};
+    \path[->]<6-7> node[proc, below of=InputVector, text width=60ex,
+      yshift=-.3in, xshift=0in] (ExploratoryMoves)
+      {\HUGE \selectfont{\textcolor{solarizedBlue}{Exploratory \thinspace Moves}}};
+
+    \path[->]<7-7> node[proc, below of=ExploratoryMoves, text width=60ex,
+      yshift=-.1in, xshift=0in] (ExploratoryQuestion)
+      {\huge \selectfont{\textcolor{solarizedBlue}{Positive or negative ``direction''?}}};
+
+    \path[->]<8-11> node[proc, below of=InputVector, text width=60ex,
+      yshift=-.3in, xshift=0in] (PatternMoves)
+      {\HUGE \selectfont{\textcolor{solarizedBlue}{Pattern \thinspace Moves}}};
+
+    \path[->]<9-11> node[proc, below of=ExploratoryMoves, text width=60ex,
+      yshift=-.1in, xshift=0in] (PatternQuestion)
+      {\huge \selectfont{\textcolor{solarizedBlue}{Improve objective value?}}};
+
+    \path[->]<10-10> node[proc, below of=PatternQuestion, text width=60ex,
+      yshift=-0in, xshift=0in] (PatternAnswer)
+      {\LARGE \selectfont{\textcolor{solarizedGreen}{Yes! pattern \textcolor{solarizedBase2}{or} \textcolor{solarizedBase2}{No! explore}}}};
+
+    \path[->]<11-11> node[proc, below of=PatternQuestion, text width=60ex,
+      yshift=-0in, xshift=0in] (PatternAnswer)
+      {\LARGE \selectfont{\textcolor{solarizedGreen}{Yes! pattern \textcolor{solarizedRebase00}or \textcolor{solarizedRed}{No! explore}}}};
 
 
   \end{tikzpicture}
