@@ -12,8 +12,13 @@
     \path[use as bounding box] (-2,4.0) rectangle (8,-2);
 
     \path[->]<1-> node[proc, text width=60ex]
-      (InputVector) at (3.5,3)
+      (InputVectorName) at (3.5,3)
       {\HUGE \selectfont{\textcolor{solarizedRebase00}{Input \thinspace Vector}}};
+
+    \path[->]<2-> node[proc, below of=InputVectorName, text width=60ex,
+      yshift=-.2in, xshift=0in] (InputVector)
+      {\HUGE \selectfont{\textcolor{solarizedRebase00}{$\vec{x} = (x_1, x_2, \ldots, x_n)$}}};
+
 
   \end{tikzpicture}
 
