@@ -1,0 +1,49 @@
+\begin{frame}
+  \frametitle{AVM is Everywhere}
+
+  \tikzstyle{box}=[rectangle, draw=solarizedBase02, rounded corners, fill=solarizedBlue, drop shadow,
+  text centered, anchor=north, text=white, minimum height = 1cm, text width=3cm]
+  \tikzstyle{operator}=[rectangle, draw=solarizedBase02, rounded corners, fill=solarizedOrange, drop shadow,
+  text centered, anchor=north, text=white, minimum height = 1cm, text width=8cm]
+  \tikzstyle{smallbox}=[rectangle, draw=solarizedBase02, rounded corners, fill=solarizedBlue, drop shadow,
+  text centered, anchor=north, text=white, minimum height = 1cm, text width=2cm]
+
+  \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
+
+    \path[use as bounding box] (-2,4.0) rectangle (8,-2);
+
+    %%% Step: Test Generation
+
+    \path[->]<1-> node[proc, text width=60ex]
+      (TestGeneration) at (3.5,3.2)
+      {\Huge \selectfont{\textcolor{solarizedRebase00}{Test \thinspace Generation}}};
+
+    %% Tool 1
+
+    \path[->, line width = 3pt]<2-> node[proc, below of=TestGeneration, text width=12ex,
+      yshift=-.5in, xshift=-1.5in]
+      (Austin) {\Huge \selectfont{\textcolor{solarizedRebase00}{AUSTIN}}}
+      (TestGeneration) edge node {}
+      (Austin);
+
+    %% Tool 2
+
+    \path[->, line width = 3pt]<3-> node[proc, below of=TestGeneration, text width=12ex,
+      yshift=-.5in, xshift=1.25in]
+      (EvoSuite) {\Huge \selectfont{\textcolor{solarizedRebase00}{EvoSuite}}}
+      (TestGeneration) edge node {}
+      (EvoSuite);
+
+    %% Tool 3
+
+    \path[->, line width = 3pt]<4-> node[proc, below of=TestGeneration, text width=22ex,
+      yshift=-1.1in, xshift=-.5in]
+      (Schema) {\Huge \selectfont{\textcolor{solarizedRebase00}{SchemaAnalyst}}}
+      (TestGeneration) edge node {}
+      (Schema);
+
+
+
+  \end{tikzpicture}
+
+\end{frame}
