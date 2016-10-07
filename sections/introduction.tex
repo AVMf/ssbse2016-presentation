@@ -1,36 +1,30 @@
+  %%%%% TIKZ STYLES FOR THESE SLIDES:
 
-  %%%%% SLIDE: Say the name of the method of which we are providing an implementation
+\tikzstyle{proc} = [draw=none, fill=none, text centered, text=solarizedRebase02]
 
-  \begin{frame}
-    \frametitle{Introduction}
-    \begin{center}
-      \fontsize{50}{50}\selectfont{\textcolor{solarizedViolet}{Alternating Variable Method}}
-    \end{center}
-  \end{frame}
+%%%%% SLIDE: Say the name of the method of which we are providing an implementation
 
-  %%%%% SLIDE: Give some of the details about the AVM, in terms of its search process
+% \begin{frame}
+%   \frametitle{Introduction}
+%   \begin{center}
+%     \fontsize{50}{50}\selectfont{\textcolor{solarizedViolet}{Alternating Variable Method}}
+%   \end{center}
+% \end{frame}
 
-  \begin{frame}
-    \frametitle{Exploring AVM}
-    \begin{center}
+%%%%% SLIDE: Give some of the details about the AVM, in terms of its search process
 
-      %%% STEP
+\begin{frame}
+  \frametitle{Exploring AVM}
 
-      \visible<1->{\HUGE \vspace*{-.35in} Input Vector \\ \vspace*{.1in} }
+      \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
 
-      %%% STEP
+        \path[use as bounding box] (-2,4.0) rectangle (8,-2);
 
-      \only<1->{\fontsize{40}{50}\selectfont{$\vec{x} = ($}
-        {\HUGE {\textcolor{solarizedViolet}{$x_1$, $x_2$, $\dots$, $x_n$}}}
-      \fontsize{40}{50}\selectfont{$)$}}
+        \path[->]<1-> node[proc, text width=60ex]
+          (InputVector) at (3.5,3)
+          {\HUGE \selectfont{\textcolor{solarizedRebase00}{Input \thinspace Vector}}};
 
-      %%% STEP
+      \end{tikzpicture}
 
-      \only<3>{\fontsize{40}{50}\selectfont{$\vec{x} = ($}
-        {\HUGE {\textcolor{solarizedRed}{$x_1$, $x_2$, $\dots$, $x_n$}}}
-      \fontsize{40}{50}\selectfont{$)$}}
-
-
-    \end{center}
-  \end{frame}
+\end{frame}
 
