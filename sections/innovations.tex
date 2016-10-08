@@ -3,7 +3,7 @@
 \tikzstyle{proc} = [draw=solarizedRebase00, fill=solarizedOrange!65, text centered, text=solarizedRebase02, line width = 2pt, rounded corners]
 \tikzstyle{say} = [draw=none, fill=none, text centered, text=solarizedRebase02]
 
-%%%%% SLIDE: Give some of the details about the great use of the AVM
+%%%%% SLIDE: Give some of the new ways in which the AVM search has been improved --- SEARCH ALGORITHMS
 
 \begin{frame}
   \frametitle{AVM Innovations}
@@ -40,6 +40,55 @@
     \path[->, line width = 3pt]<4-> node[proc, below of=TestGeneration, text width=40ex,
       yshift=-1.2in, xshift=0in]
       (Schema) {\Huge \selectfont{\textcolor{solarizedRebase00}{\hspace*{-.05in} Iterated Pattern}}}
+      (TestGeneration) edge node {}
+      (Schema);
+
+    % Key take-home point
+
+    \path[->]<5-> node[say, below of=TestGeneration, text width=65ex,
+        yshift=-1.8in, xshift=0.0in]
+        (Point) {\huge \selectfont{\textcolor{solarizedBlue}{Better search for some landscapes}}};
+
+  \end{tikzpicture}
+\end{frame}
+
+%%%%% SLIDE: Give some of the new ways in which the AVM search has been improved --- SEARCH ALGORITHMS
+
+\begin{frame}
+  \frametitle{AVM Innovations}
+  \framesubtitle{\mbox{}}
+
+  \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
+
+    \path[use as bounding box] (-2,4.0) rectangle (8,-2);
+
+    %%% Step: Search Algorithms
+
+    \path[->]<1-> node[proc, text width=35ex]
+      (TestGeneration) at (3.5,3.5)
+      {\Huge \selectfont{\textcolor{solarizedRebase00}{Representations}}};
+
+    %% Search 1
+
+    \path[->, line width = 3pt]<2-> node[proc, below of=TestGeneration, text width=22ex,
+      yshift=-.5in, xshift=-1.25in]
+      (Austin) {\Huge \selectfont{\textcolor{solarizedRebase00}{Decimals}}}
+      (TestGeneration) edge node {}
+      (Austin);
+
+    %% Search 2
+
+    \path[->, line width = 3pt]<3-> node[proc, below of=TestGeneration, text width=22ex,
+      yshift=-.5in, xshift=1.25in]
+      (EvoSuite) {\Huge \selectfont{\textcolor{solarizedRebase00}{Strings}}}
+      (TestGeneration) edge node {}
+      (EvoSuite);
+
+    %% Search 3
+
+    \path[->, line width = 3pt]<4-> node[proc, below of=TestGeneration, text width=22ex,
+      yshift=-1.2in, xshift=0in]
+      (Schema) {\Huge \selectfont{\textcolor{solarizedRebase00}{Integers}}}
       (TestGeneration) edge node {}
       (Schema);
 
