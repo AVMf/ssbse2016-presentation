@@ -16,7 +16,7 @@
 
   \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
 
-    \path[use as bounding box] (-2,4.0) rectangle (8,-2);
+    \path[use as bounding box] (-2,4.5) rectangle (8,-2);
 
     %%% Step: Show the AVMf tool logo
 
@@ -42,6 +42,12 @@
       yshift=-1in, xshift=.15in]
       (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{Adheres to the principles of object-oriented design}}};
 
+    %% Option
+
+    \path[->, line width = 3pt]<5-5> node[say, below of=CoolTool, text width=60ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{Free and open-source software from \url{avmframework.org}}}};
+
   \end{tikzpicture}
 
 \end{frame}
@@ -56,7 +62,7 @@
 
   \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
 
-    \path[use as bounding box] (-2,4.0) rectangle (8,-2);
+    \path[use as bounding box] (-2,4.5) rectangle (8,-2);
 
     %%% Step: Show the AVMf tool logo
 
@@ -67,10 +73,10 @@
     %% Option 1
 
     \path[->, line width = 3pt]<2-2> node[say, below of=CoolTool, text width=60ex,
-      yshift=-1.35in, xshift=.15in]
+      yshift=-1.25in, xshift=.15in]
       (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{New Application Domain}}};
 
-    \onslide<2>\draw[solarizedRebase00, line width=3pt, ->](3,1.5) -- (3,-1.25);
+    \onslide<2>\draw[solarizedRebase00, line width=3pt, ->](3,1.5) -- (3,-1.0);
 
   \end{tikzpicture}
 
@@ -84,7 +90,7 @@
 
   \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
 
-    \path[use as bounding box] (-2,4.0) rectangle (8,-2);
+    \path[use as bounding box] (-2,4.5) rectangle (8,-2);
 
     %%% Step: Show the AVMf tool logo
 
@@ -95,10 +101,10 @@
     %% Option 2
 
     \path[->, line width = 3pt]<2-2> node[say, below of=CoolTool, text width=60ex,
-      yshift=-1.35in, xshift=.15in]
+      yshift=-1.25in, xshift=.15in]
       (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{New Search Algorithm}}};
 
-    \onslide<2>\draw[solarizedRebase00, line width=3pt, ->](3,1.5) -- (3,-1.25);
+    \onslide<2>\draw[solarizedRebase00, line width=3pt, ->](3,1.5) -- (3,-1.0);
 
   \end{tikzpicture}
 
