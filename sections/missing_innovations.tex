@@ -3,7 +3,7 @@
 \tikzstyle{box}=[rectangle, draw=solarizedBase03, rounded corners, fill=solarizedBlue, drop shadow,
 text centered, anchor=north, minimum width = 2cm, minimum height = 1cm, text=white, text width=10cm]
 
-\tikzstyle{plain} = [draw, line width = 2pt, fill=solarizedBase2, text centered, text=solarizedRebase1, draw=solarizedBase2]
+\tikzstyle{plain} = [draw, line width = 2pt, fill=solarizedBase2!120, text centered, text=solarizedRebase1, draw=solarizedBase2!120]
 
 %%%%% SLIDE: Give some of the details about the great use of the AVM in problem domains
 
@@ -18,10 +18,10 @@ text centered, anchor=north, minimum width = 2cm, minimum height = 1cm, text=whi
           \input{details/program1_mutation.tex}
         \begin{tikzpicture}
           \path[->]<1> node[plain, text width=20ex]
-          (Alive) at (-2.75,-.25) {\Huge \cmarkhide {Alive}};
+          (Alive) at (-3.25,-.25) {\Huge \xmarkhide {Data?}};
 
           \path[->]<2-> node[plain, text width=20ex]
-          (Alive) at (-2.75,-.25) {\Huge \cmark {Alive}};
+          (Alive) at (-3.25,-.25) {\Huge \xmark {Data?}};
         \end{tikzpicture}
     \end{minipage}%
     \begin{minipage}{0.5\textwidth}
@@ -30,11 +30,11 @@ text centered, anchor=north, minimum width = 2cm, minimum height = 1cm, text=whi
        \begin{tikzpicture}
           \path[->]<1> node[plain, text width=20ex,
           yshift=0.0in, xshift=1.75in, minimum width=20ex]
-          (Killed) {\Huge \xmarkhide {Killed}};
+          (Killed) {\Huge \xmarkhide {Method?}};
 
           \path[->]<2> node[plain, text width=20ex,
           yshift=-0.0in, xshift=1.75in, minimum width=20ex]
-          (killed) {\Huge \xmarkhide {Killed}};
+          (killed) {\Huge \xmark {Method?}};
         \end{tikzpicture}
     \end{minipage}
 \end{figure}
