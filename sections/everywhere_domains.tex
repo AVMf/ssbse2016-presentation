@@ -1,0 +1,52 @@
+%%%%% TIKZ STYLES FOR THESE SLIDES:
+
+\tikzstyle{proc} = [draw=solarizedRebase00, fill=solarizedOrange!65, text centered, text=solarizedRebase02, line width = 2pt, rounded corners]
+\tikzstyle{say} = [draw=none, fill=none, text centered, text=solarizedRebase02]
+
+%%%%% SLIDE: Give some of the details about the great use of the AVM in problem domains
+
+\begin{frame}
+  \frametitle{AVM is Everywhere}
+  \framesubtitle{\mbox{}}
+
+  \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
+
+    \path[use as bounding box] (-2,4.0) rectangle (8,-2);
+
+    %%% Step: Test Generation
+
+    \path[->]<1-> node[proc, text width=30ex]
+      (TestGeneration) at (3.5,3.5)
+      {\Huge \selectfont{\textcolor{solarizedRebase00}{Application \thinspace Domains}}};
+
+    %% Tool 1
+
+    \path[->, line width = 3pt]<2-> node[proc, below of=TestGeneration, text width=22ex,
+      yshift=-.5in, xshift=-1.5in]
+      (Austin) {\Huge \selectfont{\textcolor{solarizedRebase00}{Workloads}}}
+      (TestGeneration) edge node {}
+      (Austin);
+
+    %% Tool 2
+
+    \path[->, line width = 3pt]<3-> node[proc, below of=TestGeneration, text width=16ex,
+      yshift=-.5in, xshift=1.5in]
+      (EvoSuite) {\Huge \selectfont{\textcolor{solarizedRebase00}{Testing}}}
+      (TestGeneration) edge node {}
+      (EvoSuite);
+
+    %% Tool 3
+
+    \path[->, line width = 3pt, transform canvas={xshift=.1in}]<4-> node[proc, below of=TestGeneration, text width=50ex,
+      yshift=-1.1in, xshift=0in]
+      (Schema) {\Huge \selectfont{\textcolor{solarizedRebase00}{Software Product Lines}}}
+      (TestGeneration) edge node {}
+      (Schema);
+
+    \path[->]<5-> node[say, below of=TestGeneration, text width=60ex,
+        yshift=-1.65in, xshift=0.0in]
+        (Point) {\huge \selectfont{\textcolor{solarizedBlue}{AVM is used in varied domains}}};
+
+  \end{tikzpicture}
+
+\end{frame}
