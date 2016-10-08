@@ -1,0 +1,41 @@
+%%%%% TIKZ STYLES FOR THESE SLIDES:
+
+\tikzstyle{proc} = [draw=solarizedRebase02!75, fill=solarizedBlue!65, text centered, text=solarizedRebase00,
+                    line width = 2pt, rounded corners, minimum height = 8ex]
+
+\tikzstyle{say} = [draw=none, fill=none, text centered, text=solarizedRebase02]
+
+%%%%% Declare images
+
+% avmf_transparent.png
+\pgfdeclareimage[width=20em]{AVMf}{images/avmftransparent.png}
+
+%%%%% SLIDE: Give some of the features of the AVMf
+
+\begin{frame}
+  \frametitle{Design of AVM$f$}
+  \framesubtitle{\mbox{}}
+
+  \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
+
+    \path[use as bounding box] (-2,4.5) rectangle (8,-2);
+
+    %%% Step: Show the AVMf tool logo
+
+    \path[->]<1-> node[say, text width=30ex]
+      (CoolTool) at (3,2.5)
+      {\pgfuseimage{AVMf}};
+
+    %% Design
+
+    \path[->, line width = 3pt]<2-3> node[proc, below of=CoolTool, text width=22ex,
+      yshift=-1in, xshift=-1.05in]
+      (Configure) {\Huge \selectfont{\textcolor{solarizedRebase02!75}{Configure}}};
+
+    \path[->, line width = 3pt]<3-3> node[proc, below of=CoolTool, text width=22ex,
+      yshift=-1in, xshift=1.4in]
+      (Represent) {\Huge \selectfont{\textcolor{solarizedRebase02!75}{Represent}}};
+
+  \end{tikzpicture}
+
+\end{frame}
