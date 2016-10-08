@@ -1,6 +1,7 @@
 %%%%% TIKZ STYLES FOR THESE SLIDES:
 
 \tikzstyle{proc} = [draw=solarizedRebase00, fill=solarizedOrange!65, text centered, text=solarizedRebase02, line width = 2pt, rounded corners]
+\tikzstyle{past} = [draw=solarizedRebase00, fill=solarizedOrange!65, text centered, text=solarizedRebase02, line width = 2pt]
 \tikzstyle{say} = [draw=none, fill=none, text centered, text=solarizedRebase02]
 
 %%%%% SLIDE: Give some of the new ways in which the AVM search has been improved --- SEARCH ALGORITHMS
@@ -37,7 +38,7 @@
 
     %% Search 3
 
-    \path[->, line width = 3pt]<4-> node[proc, below of=TestGeneration, text width=40ex,
+    \path[->, line width = 3pt]<4-> node[past, below of=TestGeneration, text width=40ex,
       yshift=-1.2in, xshift=0in]
       (Schema) {\Huge \selectfont{\textcolor{solarizedRebase00}{\hspace*{-.05in} Iterated Pattern}}}
       (TestGeneration) edge node {}
@@ -68,7 +69,7 @@
       (TestGeneration) at (3.5,3.5)
       {\Huge \selectfont{\textcolor{solarizedRebase00}{Representations}}};
 
-    %% Search 1
+    %% Data 1
 
     \path[->, line width = 3pt]<2-> node[proc, below of=TestGeneration, text width=22ex,
       yshift=-.5in, xshift=-1.25in]
@@ -76,7 +77,7 @@
       (TestGeneration) edge node {}
       (Austin);
 
-    %% Search 2
+    %% Data 2
 
     \path[->, line width = 3pt]<3-> node[proc, below of=TestGeneration, text width=22ex,
       yshift=-.5in, xshift=1.25in]
@@ -84,9 +85,9 @@
       (TestGeneration) edge node {}
       (EvoSuite);
 
-    %% Search 3
+    %% Data 3
 
-    \path[->, line width = 3pt]<4-> node[proc, below of=TestGeneration, text width=22ex,
+    \path[->, line width = 3pt]<4-> node[past, below of=TestGeneration, text width=22ex,
       yshift=-1.2in, xshift=0in]
       (Schema) {\Huge \selectfont{\textcolor{solarizedRebase00}{Integers}}}
       (TestGeneration) edge node {}
