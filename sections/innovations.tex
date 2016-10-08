@@ -13,39 +13,41 @@
 
     \path[use as bounding box] (-2,4.0) rectangle (8,-2);
 
-    %%% Step: Test Generation
+    %%% Step: Search Algorithms
 
     \path[->]<1-> node[proc, text width=30ex]
-      (TestGeneration) at (3.25,3.5)
-      {\Huge \selectfont{\textcolor{solarizedRebase00}{Test \thinspace Generation}}};
+      (TestGeneration) at (3.5,3.5)
+      {\Huge \selectfont{\textcolor{solarizedRebase00}{Search \thinspace Algorithms}}};
 
-    %% Tool 1
+    %% Search 1
 
     \path[->, line width = 3pt]<2-> node[proc, below of=TestGeneration, text width=22ex,
       yshift=-.5in, xshift=-1.25in]
-      (Austin) {\Huge \selectfont{\textcolor{solarizedRebase00}{AUSTIN}}}
+      (Austin) {\Huge \selectfont{\textcolor{solarizedRebase00}{Geometric}}}
       (TestGeneration) edge node {}
       (Austin);
 
-    %% Tool 2
+    %% Search 2
 
     \path[->, line width = 3pt]<3-> node[proc, below of=TestGeneration, text width=22ex,
       yshift=-.5in, xshift=1.25in]
-      (EvoSuite) {\Huge \selectfont{\textcolor{solarizedRebase00}{EvoSuite}}}
+      (EvoSuite) {\Huge \selectfont{\textcolor{solarizedRebase00}{Lattice}}}
       (TestGeneration) edge node {}
       (EvoSuite);
 
-    %% Tool 3
+    %% Search 3
 
     \path[->, line width = 3pt]<4-> node[proc, below of=TestGeneration, text width=40ex,
       yshift=-1.2in, xshift=0in]
-      (Schema) {\Huge \selectfont{\textcolor{solarizedRebase00}{\hspace*{-.05in} SchemaAnalyst}}}
+      (Schema) {\Huge \selectfont{\textcolor{solarizedRebase00}{\hspace*{-.05in} Iterated Pattern}}}
       (TestGeneration) edge node {}
       (Schema);
 
-    \path[->]<5-> node[say, below of=TestGeneration, text width=50ex,
+    % Key take-home point
+
+    \path[->]<5-> node[say, below of=TestGeneration, text width=65ex,
         yshift=-1.8in, xshift=0.0in]
-        (Point) {\huge \selectfont{\textcolor{solarizedBlue}{AVM is used in many tools}}};
+        (Point) {\huge \selectfont{\textcolor{solarizedBlue}{Better search for some landscapes}}};
 
   \end{tikzpicture}
 
