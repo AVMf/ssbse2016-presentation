@@ -1,0 +1,102 @@
+%%%%% TIKZ STYLES FOR THESE SLIDES:
+
+\tikzstyle{proc} = [draw=solarizedRebase02!75, fill=solarizedBlue!65, text centered, text=solarizedRebase00,
+                    line width = 2pt, rounded corners, minimum height = 8ex]
+
+\tikzstyle{say} = [draw=none, fill=none, text centered, text=solarizedRebase02]
+
+%%%%% Declare images
+
+% avmf_transparent.png
+\pgfdeclareimage[width=20em]{AVMf}{images/avmftransparent.png}
+
+%%%%% SLIDE: Give some of the features of the AVMf
+
+\begin{frame}
+  \frametitle{AVM$f$ Demonstration}
+  \framesubtitle{\mbox{}}
+
+  \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
+
+    \path[use as bounding box] (-2,4.5) rectangle (8,-2);
+
+    %%% Step: Show the AVMf tool logo
+
+    \path[->]<1-> node[say, text width=30ex]
+      (CoolTool) at (3,2.5)
+      {\pgfuseimage{AVMf}};
+
+    %% Option
+
+    \path[->, line width = 3pt]<2-2> node[say, below of=CoolTool, text width=70ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{java org.avmframework. \\ examples.Quadratic}}};
+
+    %% Option
+
+    \path[->, line width = 3pt]<3-3> node[say, below of=CoolTool, text width=70ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{java org.avmframework. \\ examples.StringOptimization}}};
+
+    %% Option
+
+    \path[->, line width = 3pt]<4-4> node[say, below of=CoolTool, text width=70ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{java org.avmframework. \\ examples.GenerateInputData}}};
+
+    %% Option
+
+    \path[->, line width = 3pt]<5-5> node[say, below of=CoolTool, text width=70ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{Input $\rightarrow$ Output $\rightarrow$ Behavior}}};
+
+    \path[->, line width = 3pt]<6-6> node[say, below of=CoolTool, text width=70ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{Already run: \\[.1in] git clone \& mvn package}}};
+
+  \end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{AVM$f$'s Contributions}
+  \framesubtitle{\mbox{}}
+
+  \begin{tikzpicture}[node distance=1cm, auto,>=stealth, thick]
+
+    \path[use as bounding box] (-2,4.5) rectangle (8,-2);
+
+    %%% Step: Show the AVMf tool logo
+
+    \path[->]<1-> node[say, text width=30ex]
+      (CoolTool) at (3,2.5)
+      {\pgfuseimage{AVMf}};
+
+    %% Option
+
+    \path[->, line width = 3pt]<2-2> node[say, below of=CoolTool, text width=70ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{Overcomes the \\[.15in] challenges of using AVM}}};
+
+    %% Option
+
+    \path[->, line width = 3pt]<3-3> node[say, below of=CoolTool, text width=70ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{Provably optimal searches \\[.1in] and new data types}}};
+
+    %% Option
+
+    \path[->, line width = 3pt]<4-4> node[say, below of=CoolTool, text width=70ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{Accessible object-oriented \\[.1in] and algorithmic design}}};
+
+    %% Option
+
+    \path[->, line width = 3pt]<5-5> node[say, below of=CoolTool, text width=70ex,
+      yshift=-1in, xshift=.15in]
+      (FirstOption) {\Huge \selectfont{\textcolor{solarizedBlue}{Open-source download \\[.1in] from \url{avmframework.org}}}};
+
+  \end{tikzpicture}
+
+\end{frame}
+
